@@ -104,70 +104,8 @@ style="top: 17.5%; border-top: none; width: 75%; border-radius: 0% 0% 100% 100%;
 
   </div>
 </body>
-<script>
-  function escolherImagem(jogadorClass) {
-      const input = document.createElement('input');
-      input.type = 'file';
-      input.accept = 'image/*';
-      input.onchange = () => handleImageSelection(event, jogadorClass);
-      input.click();
-  }
+<script src="index.js">
 
-  function handleImageSelection(event, jogadorClass) {
-      const file = event.target.files[0];
-      const reader = new FileReader();
-
-      reader.onload = function (event) {
-          const imageDataURL = event.target.result;
-          const jogadorDiv = document.querySelector(`.${jogadorClass}`);
-          const addElement = jogadorDiv.querySelector('.add');
-          const trashIcon = jogadorDiv.querySelector('.fa-trash');
-
-          jogadorDiv.style.backgroundImage = `url('${imageDataURL}')`;
-          jogadorDiv.style.backgroundSize = 'cover';
-          jogadorDiv.style.backgroundPosition = 'center';
-          addElement.style.display = 'none';
-          trashIcon.style.display = 'block';
-
-          // Armazena a URL da imagem no armazenamento local
-          localStorage.setItem(jogadorClass, imageDataURL);
-      };
-
-      reader.readAsDataURL(file);
-  }
-
-  function apagarImagem(jogadorClass) {
-      const jogadorDiv = document.querySelector(`.${jogadorClass}`);
-      const addElement = jogadorDiv.querySelector('.add');
-      const trashIcon = jogadorDiv.querySelector('.fa-trash');
-
-      jogadorDiv.style.backgroundImage = '';
-      addElement.style.display = 'block';
-      trashIcon.style.display = 'none';
-
-      // Remove a URL da imagem do armazenamento local
-      localStorage.removeItem(jogadorClass);
-  }
-
-  // Recupera as URLs das imagens armazenadas no armazenamento local ao carregar a página
-  window.onload = function () {
-      const jogadores = document.querySelectorAll('.jogador');
-      jogadores.forEach((jogadorDiv) => {
-          const jogadorClass = jogadorDiv.classList[1];
-          const imageDataURL = localStorage.getItem(jogadorClass);
-
-          if (imageDataURL) {
-              const addElement = jogadorDiv.querySelector('.add');
-              const trashIcon = jogadorDiv.querySelector('.fa-trash');
-
-              jogadorDiv.style.backgroundImage = `url('${imageDataURL}')`;
-              jogadorDiv.style.backgroundSize = 'cover';
-              jogadorDiv.style.backgroundPosition = 'center';
-              addElement.style.display = 'none';
-              trashIcon.style.display = 'block';
-          }
-      });
-  };
 </script>
 
 </html>
