@@ -160,13 +160,13 @@ body {
 
 @media (max-width: 480px) {
   .central {
-    background-color: #242424; 
-    height: 1000px; 
-    width: 600px; 
-    position: absolute; 
+    background-color: #242424;
+    height: 1000px;
+    width: 470px;
+    position: absolute;
     transform: translate(-50%, -50%);
-    left: 49.7%; 
-    top: 34%; 
+    left: 49.7%;
+    top: 34%;
   }
 
   .principal {
