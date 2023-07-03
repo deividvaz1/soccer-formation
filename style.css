@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(32, 129, 111);
+}
+
+.central {
+  background-color: gray; 
+  height: 800px; 
+  width: 800px; 
+  position: absolute; 
+  left: 28.6%; 
+  top: 8%; 
+  border-radius: 2%;
+}
