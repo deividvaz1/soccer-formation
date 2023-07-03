@@ -55,3 +55,23 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.linha {
+  background-color: aliceblue;
+  height: 6.5px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  top: 50%;
+}
+
+.circulo {
+  position: absolute;
+  top: 42.5%;
+  left: 41%;
+  width: 105px;
+  height: 105px;
+  background-color: transparent;
+  border: 5px solid aliceblue;
+  border-radius: 50%;
+}
