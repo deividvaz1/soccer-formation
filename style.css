@@ -42,7 +42,7 @@ body {
   background-repeat: repeat-y; /* Repete verticalmente */
 }
 
-.elemento_gol1 {
+.elemento_gol {
   width: 40%;
   max-width: 150px;
   height: 20%;
