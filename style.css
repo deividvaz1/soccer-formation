@@ -77,6 +77,29 @@ body {
   border-radius: 50%;
 }
 
+.jogador {
+  position: absolute;
+  top: 83%;
+  left: 42.5%;
+  width: 80px;
+  height: 80px;
+  background-color: rgb(32, 129, 111);
+  border: 5px solid rgb(32, 129, 111);
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  color: aliceblue; 
+  font-size: 35px; 
+  font-weight: 900;
+}
+
+.add {
+  text-transform: uppercase; 
+  cursor: pointer; 
+  margin-left: 21%; 
+  margin-top: -6%;
+
+}
+
 @media (max-width: 600px) {
   
   .principal {
@@ -109,6 +132,11 @@ body {
     border-radius: 50%;
     font-size: 25px; 
     font-weight: 900;
+  }
+
+  .add {
+    margin-left: 26%; 
+    margin-top: 0%;
   }
 
 
