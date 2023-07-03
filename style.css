@@ -9,12 +9,13 @@ body {
 }
 
 .central {
-  background-color: gray; 
+  background-color: #242424; 
   height: 800px; 
   width: 800px; 
   position: absolute; 
-  left: 28.6%; 
-  top: 8%; 
+  transform: translate(-50%, -50%) perspective(1200px) rotateX(25deg);
+  left: 49.7%; 
+  top: 44%; 
   border-radius: 2%;
 }
 
