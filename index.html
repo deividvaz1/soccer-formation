@@ -28,11 +28,15 @@
 
 <div class="linha"></div>
 <div class="circulo"></div>
-<div class="jogador jogador4" style="left: 43.5%;">
-  <h1 class="add" onclick="escolherImagem('jogador4')">+</h1>
-  <i class="fa fa-trash" aria-hidden="true" style="left: -50%; position:absolute; color:red; display:none"
-          onclick="apagarImagem('jogador4')"></i>
+<div class="jogador jogador1" style="left: 43.5%;">
+  <h1 class="add" onclick="escolherImagem('jogador1')">+</h1>
 </div>
+
+<div class="jogador jogador2" style="top: 68%; left: 60%;">
+  <h1 class="add" onclick="escolherImagem('jogador2')">+</h1>
+</div>
+
+
 
 <div class="elemento_gol" style=" top: -4%; border-bottom: none;"></div>
 <div class="elemento_gol" style="top: 5%; width: 70%; max-width: 170px; height: 30%; max-height: 70px; ">
@@ -45,4 +49,54 @@ style="top: 17.5%; border-top: none; width: 75%; border-radius: 0% 0% 100% 100%;
 
   </div>
 </body>
+<script>
+  function escolherImagem(jogadorClass) {
+      const input = document.createElement('input');
+      input.type = 'file';
+      input.accept = 'image/*';
+      input.onchange = () => handleImageSelection(event, jogadorClass);
+      input.click();
+  }
+
+  function handleImageSelection(event, jogadorClass) {
+      const file = event.target.files[0];
+      const reader = new FileReader();
+
+      reader.onload = function (event) {
+          const imageDataURL = event.target.result;
+          const jogadorDiv = document.querySelector(`.${jogadorClass}`);
+          const addElement = jogadorDiv.querySelector('.add');
+          const trashIcon = jogadorDiv.querySelector('.fa-trash');
+
+          jogadorDiv.style.backgroundImage = `url('${imageDataURL}')`;
+          jogadorDiv.style.backgroundSize = 'cover';
+          jogadorDiv.style.backgroundPosition = 'center';
+          addElement.style.display = 'none';
+          trashIcon.style.display = 'block';
+
+          localStorage.setItem(jogadorClass, imageDataURL);
+      };
+
+      reader.readAsDataURL(file);
+  }
+
+  window.onload = function () {
+      const jogadores = document.querySelectorAll('.jogador');
+      jogadores.forEach((jogadorDiv) => {
+          const jogadorClass = jogadorDiv.classList[1];
+          const imageDataURL = localStorage.getItem(jogadorClass);
+
+          if (imageDataURL) {
+              const addElement = jogadorDiv.querySelector('.add');
+              const trashIcon = jogadorDiv.querySelector('.fa-trash');
+
+              jogadorDiv.style.backgroundImage = `url('${imageDataURL}')`;
+              jogadorDiv.style.backgroundSize = 'cover';
+              jogadorDiv.style.backgroundPosition = 'center';
+              addElement.style.display = 'none';
+              trashIcon.style.display = 'block';
+          }
+      });
+  };
+</script>
 </html>
