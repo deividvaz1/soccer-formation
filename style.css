@@ -17,3 +17,26 @@ body {
   top: 8%; 
   border-radius: 2%;
 }
+
+.principal { 
+  width: 80%;
+  max-width: 600px;
+  height: 70vh;
+  max-height: 700px;
+  border: 8px solid aliceblue;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  border-radius: 10%;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%) perspective(1200px) rotateX(35deg);
+  background: linear-gradient(
+    to bottom,
+    rgb(20, 143, 20) 0%,
+    rgb(20, 143, 20) 50%,
+    darkgreen 50%,
+    darkgreen 100%
+  );
+  background-size: 100% 91.2px; /* Define a altura das linhas */
+  background-repeat: repeat-y; /* Repete verticalmente */
+}
