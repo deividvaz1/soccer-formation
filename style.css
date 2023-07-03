@@ -41,3 +41,17 @@ body {
   background-size: 100% 91.2px; /* Define a altura das linhas */
   background-repeat: repeat-y; /* Repete verticalmente */
 }
+
+.inner-square {
+  width: 40%;
+  max-width: 150px;
+  height: 20%;
+  max-height: 40px;
+  background-color: transparent;
+  border: 5px solid aliceblue;
+  border-radius: 2%;
+  position: absolute;
+  top: 103.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
