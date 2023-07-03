@@ -21,7 +21,8 @@ Front-End:
 
 ## 💻 Projeto
 
-Tentei recriar algo parecido com a formação do cartola FC da globo.
+Tentei recriar algo parecido com a formação do cartola FC da globo para um trabalho da faculdade.
+
 
 
 ## 💻 Instalação
