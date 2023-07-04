@@ -107,7 +107,7 @@ body {
 }
 
 @media (max-width: 600px) {
-  
+
   .principal {
     width: 90%;
     height: 70%;
@@ -127,7 +127,6 @@ body {
     top: 34%; 
   }
 
-  
   .jogador {
     position: absolute;
     width: 70px;
@@ -139,6 +138,7 @@ body {
     font-size: 25px; 
     font-weight: 900;
   }
+  
   .add {
     margin-left: 26%; 
     margin-top: 0%;
@@ -175,6 +175,4 @@ body {
     max-height: none;
   }
 
-
 }
-
