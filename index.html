@@ -68,10 +68,25 @@
       max-height: 40px;
     }
 
-    .jogador-ponta {
+    .jogador-ponta-direita {
       top: 75%; 
       left: 94%; 
-      background-color: aquamarine;
+    }
+
+    .jogador-ponta-esquerda {
+      top: 75%; 
+      left: -27%; 
+    }
+    @media (max-width: 600px) {
+      .jogador-ponta-direita {
+      top: 85%; 
+      left: 80%; 
+    }
+
+      .jogador-ponta-esquerda {
+      top: 87%; 
+      left: -7%; 
+    }
     }
 
     @media (max-width: 360px) {
@@ -204,7 +219,7 @@
           onclick="apagarImagem('jogador7')"></i>
 </div>
 
-<div class="jogador jogador8 meio" style="background-color: aqua;">
+<div class="jogador jogador8 meio">
   <h1 class="add" onclick="escolherImagem('jogador8')">+</h1>
   <i class="fa fa-trash" aria-hidden="true" style="left: -50%; position:absolute; color:red; display:none"
           onclick="apagarImagem('jogador8')"></i>
